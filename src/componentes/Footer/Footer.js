@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const FooterContainer = styled.footer`
     width: 100%;
     padding: 1rem;
-    background-image: linear-gradient(90deg, rgb(0, 0, 0) 35%, #3B305C);
+    background-image: linear-gradient(90deg, #3B305C 10%, #121212);
     color: #fff;
     text-align: center;
     position: static;

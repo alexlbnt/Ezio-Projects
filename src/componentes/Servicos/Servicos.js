@@ -12,7 +12,7 @@ const ServicosContainer = styled.div`
 const Servicos = () => {
     return (
         <ServicosContainer>
-            <h1>Servicos</h1>
+            <h1>Serviços</h1>
         </ServicosContainer>
     );
   

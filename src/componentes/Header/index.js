@@ -3,7 +3,7 @@ import OpcoesHeader from '../OpcoesHeader';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-    background-image: linear-gradient(90deg, rgb(0, 0, 0) 35%, #3B305C);
+    background-image: linear-gradient(90deg, rgb(0, 0, 0) 5%, #3B305C);
     display: flex;
     justify-content: space-between;
     align-items: center;
