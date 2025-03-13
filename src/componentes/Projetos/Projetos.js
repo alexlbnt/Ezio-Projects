@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Projeto1 from '../../imagens/projeto1.png';
 import Projeto2 from '../../imagens/projeto2.png';
@@ -22,21 +22,20 @@ const ProjetosContainer = styled.div`
     background-color: #121212;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    padding: 20px;
 `;
 
 const RoletaCD = styled.div`
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(${props => props.rotation}deg);
-    width: 150px;
-    height: 150px;
+    position: relative;
+    width: 120px;
+    height: 120px;
     background: conic-gradient(
-rgb(83, 0, 0) 0deg 120deg,
-rgb(23, 0, 32) 120deg 240deg,
+        rgb(83, 0, 0) 0deg 120deg,
+        rgb(23, 0, 32) 120deg 240deg,
         #003632 240deg 360deg
     );
     border-radius: 50%;
@@ -45,44 +44,42 @@ rgb(23, 0, 32) 120deg 240deg,
     justify-content: center;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
-`;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
 
-const Segmento = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    transform: rotate(${props => props.angle}deg) translate(35px) rotate(-${props => props.angle}deg);
+    &:hover {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
 `;
 
 const ProjetoDisplay = styled.div`
-    width: 80vw;
-    height: 80vh;
+    width: 90vw;
+    max-width: 800px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     animation: ${fadeIn} 0.5s ease-in-out;
+    text-align: center;
 `;
 
 const ProjetoImagem = styled.img`
     width: 100%;
-    height: 60vh;
+    max-height: 400px;
     object-fit: cover;
     border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 `;
 
 const ProjetoDescricao = styled.p`
     margin-top: 20px;
-    font-size: 18px;
-    max-width: 80%;
+    font-size: 16px;
+    max-width: 90%;
     animation: ${fadeIn} 0.5s ease-in-out;
 `;
 
@@ -107,18 +104,14 @@ const projetos = [
 const Projetos = () => {
     const [projetoAtivo, setProjetoAtivo] = useState(0);
 
-    const handleClick = () => {
+    const handleClick = useCallback(() => {
         setProjetoAtivo((projetoAtivo + 1) % projetos.length);
-    };
+    }, [projetoAtivo]);
 
     return (
         <ProjetosContainer>
-            <RoletaCD rotation={projetoAtivo * 120} onClick={handleClick}>
-                {projetos.map((projeto, index) => (
-                    <Segmento key={index} angle={index * 120}>
-                        {projeto.nome}
-                    </Segmento>
-                ))}
+            <RoletaCD rotation={projetoAtivo * 120} onClick={handleClick} aria-label="Trocar projeto">
+                🔄
             </RoletaCD>
             <ProjetoDisplay>
                 <ProjetoImagem key={projetos[projetoAtivo].imagem} src={projetos[projetoAtivo].imagem} alt={projetos[projetoAtivo].nome} />
