@@ -3,10 +3,15 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { FaReact, FaPython } from 'react-icons/fa';
+import { SiCplusplus, SiFlutter, SiDart, SiFirebase, SiFigma, SiJavascript, SiCss3, SiHtml5 } from 'react-icons/si';
 import PaginaSobre from '../../imagens/Pagina-Sobre.png';
 import Projeto1 from '../../imagens/projeto1.png';
 import Projeto2 from '../../imagens/projeto2.png';
 import Projeto3 from '../../imagens/projeto3.png';
+
+
+
 
 const HomeContainer = styled.div`
     color: white;
@@ -75,6 +80,26 @@ const ContentSection = styled.div`
     }
 `;
 
+const IconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    svg {
+        font-size: 50px;
+        color: white;
+        transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    }
+
+    svg:hover {
+        transform: scale(1.3) rotate(15deg);
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    }
+`;
+
+
 const ExperienceSection = styled.div`
     width: 100%;
     padding: 50px 20px;
@@ -118,14 +143,46 @@ const EndSection = styled.div`
     }
 `;
 
+const SectionsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+`;
+
+const SectionServicos = styled.div`
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+`;
+
+const ResponsiveText = styled.p`
+    font-size: 1rem;
+    @media (max-width: 600px) {
+        font-size: 0.9rem;
+    }
+`;
+
 const CarouselContainer = styled.div`
     width: 80%;
-    height: 80px;
+    height: 80vh;
     margin: 50px auto;
     .slick-slide {
         display: flex;
         justify-content: center;
         margin: 0 20px;
+        height: 15vh;
     }
     .project {
         display: flex;
@@ -182,8 +239,8 @@ const Home = () => {
             <HomeContainer>
                 <Presentation>
                     <h1>Contate-nos</h1>
-                    <p>Email: <a href="mailto:seuemail@exemplo.com" style={{ color: 'white' }}>seuemail@exemplo.com</a></p>
-                    <p>ZapZap: <a href="https://wa.me/seu-numero" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Clique aqui</a></p>
+                    <p>Email: <a href="mailto:eziocorporation@gmail.com" style={{ color: 'white' }}>eziocorporation@gmail.com</a></p>
+                    <p>Whatsapp: <a href="https://wa.me/seu-numero" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Clique aqui</a></p>
                     <p>Linkedin: <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Perfil</a></p>
                 </Presentation>
             </HomeContainer>
@@ -212,18 +269,45 @@ const Home = () => {
             <ExperienceSection>
                 <h2>Conhecimentos e Experiência da Nossa Equipe</h2>
                 <p>Nossa equipe possui ampla experiência em desenvolvimento de software, trabalhando com tecnologias modernas como React, .Dart, Flutter, C++, Python e muito mais.</p>
+                <br/>
+                <br/> 
+                <IconContainer>
+                    <FaReact title="React" />
+                    <SiJavascript title="JavaScript" />
+                    <SiFlutter title="Flutter" />
+                    <SiDart title="Dart" />
+                    <SiCplusplus title="C++" />
+                    <FaPython title="Python" />
+                    <SiFirebase title="Firebase" />
+                    <SiCss3 title="CSS" />
+                    <SiHtml5 title="HTML" />
+                    <SiFigma title="Figma" />
+                </IconContainer>
             </ExperienceSection>
             <EndSection>
                 <h2>Entre em Contato e Solicite um Orçamento</h2>
-                <p>Estamos ansiosos para conhecer a sua ideia e transformá-la em um projeto de sucesso. Entre em contato conosco e solicite um orçamento sem compromisso!</p>
+                <p>Estamos ansiosos para conhecer a sua ideia e transformá-la em um projeto de sucesso. Entre em contato conosco e solicite um orçamento!</p>
+                <br />
+                <br />
+                <br />
+                <SectionsContainer>
+                    <SectionServicos>
+                        <h2>Serviços para Clientes</h2>
+                        <ResponsiveText>
+                            Oferecemos soluções de software sob medida para atender às necessidades do seu negócio. Entre em contato para saber mais!
+                        </ResponsiveText>
+                    </SectionServicos>
+                    <SectionServicos>
+                        <h2>Trabalhe Conosco</h2>
+                        <ResponsiveText>
+                            Você é um programador com ideias inovadoras? Junte-se a nós para desenvolver projetos incríveis. Envie sua proposta!
+                        </ResponsiveText>
+                    </SectionServicos>
+                </SectionsContainer>
             </EndSection>    
         </>
     );
 };
 
 export default Home;
-
-
-
-
 
