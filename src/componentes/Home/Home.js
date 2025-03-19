@@ -8,7 +8,11 @@ import { SiCplusplus, SiFlutter, SiDart, SiFirebase, SiFigma, SiJavascript, SiCs
 import Projeto1 from "../../imagens/projeto1.png";
 import Projeto2 from "../../imagens/projeto2.png";
 import Projeto3 from "../../imagens/projeto3.png";
+import Projeto4 from "../../imagens/projeto4.png";
+import Projeto5 from "../../imagens/projeto5.png";
 import SloganImage from "../../imagens/slogan.png";
+
+
 
 const HomeContainer = styled.div`
     color: white;
@@ -23,7 +27,7 @@ const HomeContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 300px;
+    padding: 20px 250px;
     gap: 50px;
 
     @media (max-width: 768px) {
@@ -101,13 +105,15 @@ const CarouselContainer = styled.div`
     padding: 15px;
     border-radius: 10px;
     transition: transform 0.3s;
+    max-width: 280px;
+    margin: 0 10px;
   }
   .project:hover {
     transform: scale(1.05);
   }
   .project img {
     width: 100%;
-    max-height: 180px;
+    max-height: 150px;
     border-radius: 10px;
   }
 `;
@@ -197,6 +203,14 @@ const Home = () => {
             <div className="project">
               <img src={Projeto3} alt="Projeto 3" />
               <p className="description">Sistema web contábil.</p>
+            </div>
+            <div className="project">
+              <img src={Projeto4} alt="Projeto 4" />
+              <p className="description">E-commerce.</p>
+            </div>
+            <div className="project">
+              <img src={Projeto5} alt="Projeto 5" />
+              <p className="description">Plataforma de ensino interativo.</p>
             </div>
           </Slider>
         </CarouselContainer>
