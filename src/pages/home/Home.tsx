@@ -1,92 +1,158 @@
 import React from 'react';
 import './_home.scss';
+import { motion } from 'framer-motion';
 import { FaCode, FaMobileAlt, FaPaintBrush, FaCloud, FaTools, FaLightbulb } from 'react-icons/fa';
-
 
 const Home: React.FC = () => {
   return (
     <div className="home">
 
       {/* Seção Hero */}
-      <section className="hero">
+      <motion.section 
+        className="hero"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="container">
-          <h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             Desenvolvemos <span>soluções incríveis</span> <br /> para o seu negócio.
-          </h1>
-          <p>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             Da ideia à implementação, criamos experiências digitais que ajudam sua empresa a se destacar no mercado.
-          </p>
-          <div className="buttons">
+          </motion.p>
+
+          <motion.div 
+            className="buttons"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             <button className="btn primary">Ver Projetos</button>
             <button className="btn secondary">Saiba Mais</button>
-          </div>
+          </motion.div>
 
-          <div className="trusted">
+          <motion.div 
+            className="trusted"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
             <p>Confiada por startups e empresas inovadoras</p>
             <div className="brands">
-              <img src="/assets/brand1.svg" alt="Marca 1" />
-              <img src="/assets/brand2.svg" alt="Marca 2" />
-              <img src="/assets/brand3.svg" alt="Marca 3" />
-              <img src="/assets/brand4.svg" alt="Marca 4" />
+              <motion.img src="/assets/brand1.svg" alt="Marca 1" whileHover={{ scale: 1.1 }} />
+              <motion.img src="/assets/brand2.svg" alt="Marca 2" whileHover={{ scale: 1.1 }} />
+              <motion.img src="/assets/brand3.svg" alt="Marca 3" whileHover={{ scale: 1.1 }} />
+              <motion.img src="/assets/brand4.svg" alt="Marca 4" whileHover={{ scale: 1.1 }} />
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Seção de Serviços */}
-      <section className="services">
+      <motion.section 
+        className="services"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="container">
-          <h2>O que fazemos</h2>
-          <p>Na Ezio Projects, projetamos soluções digitais, criamos experiências inovadoras e evoluímos seu negócio com tecnologia de ponta.</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            O que fazemos
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Na Ezio Projects, projetamos soluções digitais, criamos experiências inovadoras e evoluímos seu negócio com tecnologia de ponta.
+          </motion.p>
 
           <div className="cards">
-            <div className="card">
-              <FaCode />
-              <h3>Desenvolvimento Web</h3>
-              <p>Soluções sob medida com tecnologias modernas e escaláveis.</p>
-            </div>
-            <div className="card">
-              <FaMobileAlt />
-              <h3>Apps Mobile</h3>
-              <p>Aplicativos nativos e híbridos para Android e iOS com alta performance.</p>
-            </div>
-            <div className="card">
-              <FaPaintBrush />
-              <h3>Design UI/UX</h3>
-              <p>Interfaces intuitivas e experiências que encantam usuários.</p>
-            </div>
-            <div className="card">
-              <FaLightbulb />
-              <h3>Consultoria Técnica</h3>
-              <p>Acompanhamento estratégico para transformar sua ideia em realidade.</p>
-            </div>
-            <div className="card">
-              <FaCloud />
-              <h3>Soluções em Nuvem</h3>
-              <p>Infraestrutura confiável e escalável para seu sistema.</p>
-            </div>
-            <div className="card">
-              <FaTools />
-              <h3>Manutenção e Suporte</h3>
-              <p>Atualizações, monitoramento e segurança contínuos.</p>
-            </div>
+            {[ 
+              { icon: <FaCode />, title: 'Desenvolvimento Web', text: 'Soluções sob medida com tecnologias modernas e escaláveis.' },
+              { icon: <FaMobileAlt />, title: 'Apps Mobile', text: 'Aplicativos nativos e híbridos para Android e iOS com alta performance.' },
+              { icon: <FaPaintBrush />, title: 'Design UI/UX', text: 'Interfaces intuitivas e experiências que encantam usuários.' },
+              { icon: <FaLightbulb />, title: 'Consultoria Técnica', text: 'Acompanhamento estratégico para transformar sua ideia em realidade.' },
+              { icon: <FaCloud />, title: 'Soluções em Nuvem', text: 'Infraestrutura confiável e escalável para seu sistema.' },
+              { icon: <FaTools />, title: 'Manutenção e Suporte', text: 'Atualizações, monitoramento e segurança contínuos.' },
+            ].map((service, index) => (
+              <motion.div
+                className="card"
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                {service.icon}
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Seção de Projetos */}
-      <section className="projects">
+      <motion.section 
+        className="projects"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="container">
-          <h2>Nossos Projetos</h2>
-          <p>Veja algumas soluções que desenvolvemos para nossos clientes.</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Nossos Projetos
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Veja algumas soluções que desenvolvemos para nossos clientes.
+          </motion.p>
 
           <div className="grid">
-            <img src="/assets/project1.jpg" alt="Projeto 1" />
-            <img src="/assets/project1.jpg" alt="Projeto 2" />
-            <img src="/assets/project1.jpg" alt="Projeto 3" />
+            {[1, 2, 3].map((proj, index) => (
+              <motion.img
+                key={index}
+                src={`/assets/project1.jpg`}
+                alt={`Projeto ${proj}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ scale: 1.05 }}
+              />
+            ))}
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
