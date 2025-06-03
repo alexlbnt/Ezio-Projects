@@ -22,13 +22,15 @@
     font-weight: bold;
 
     span {
-      color: #7f5af0;
+      color: #ffffff;
     }
   }
 
   .nav-links {
     display: flex;
     gap: 2rem;
+    align-items: center;
+    transition: all 0.3s ease;
 
     a {
       color: #c0c0d0;
@@ -78,27 +80,30 @@
 
   .menu-toggle {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
   }
 
-  // RESPONSIVO
   @media (max-width: 768px) {
     .nav-links {
       flex-direction: column;
-      background-color: #1a1a2e;
       position: absolute;
       top: 100%;
-      right: 0;
+      left: 0;
       width: 100%;
-      padding: 2rem 1.5rem;
-      display: none;
-      gap: 1.5rem;
-      z-index: 99;
+      background-color: #1a1a2e;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 
       &.ativo {
-        display: flex;
+        max-height: 500px; 
+        opacity: 1;
+        pointer-events: all;
+        padding: 2rem 1.5rem;
       }
 
       a {
@@ -126,3 +131,5 @@
     }
   }
 }
+
+
