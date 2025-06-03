@@ -1,0 +1,177 @@
+.home {
+  background-color: #0f0f1a;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .hero {
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+
+      span {
+        color: #7f5af0;
+      }
+    }
+
+    p {
+      max-width: 600px;
+      margin: 1rem auto 2rem;
+      font-size: 1.1rem;
+      color: #c0c0d0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      .btn {
+        padding: 0.8rem 1.6rem;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.primary {
+          background-color: #7f5af0;
+          color: white;
+          border: none;
+
+          &:hover {
+            background-color: #6842d5;
+          }
+        }
+
+        &.secondary {
+          background: transparent;
+          border: 2px solid #7f5af0;
+          color: #7f5af0;
+
+          &:hover {
+            background: #7f5af0;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .trusted {
+      margin-top: 2.5rem;
+
+      p {
+        font-size: 0.95rem;
+        color: #999;
+        margin-bottom: 1rem;
+      }
+
+      .brands {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        img {
+          height: 40px;
+          opacity: 0.7;
+          transition: 0.3s;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #c0c0d0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+
+      .card {
+        background: #1c1c2b;
+        padding: 2rem;
+        border-radius: 10px;
+        transition: 0.3s;
+        text-align: center;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        svg {
+          font-size: 2rem;
+          color: #7f5af0;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          font-size: 1.25rem;
+          color: #ffffff;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: #c0c0d0;
+        }
+      }
+    }
+  }
+
+  .projects {
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #c0c0d0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        height: 160px;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
