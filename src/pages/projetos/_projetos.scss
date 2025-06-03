@@ -1,0 +1,106 @@
+.projetos {
+  background-color: #0f0f1a;
+  color: #ffffff;
+  padding: 4rem 2rem;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+
+  .descricao {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .lista-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .card-projeto {
+    background-color: #1b1d29;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    text-align: left;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #c0c0c0;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+
+      li {
+        display: inline-block;
+        background: #2a2d40;
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #ffffff;
+        margin: 0.2rem;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background-color: #7f5af0;
+        color: white;
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: #6842d5;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lista-projetos {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

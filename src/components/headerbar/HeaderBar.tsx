@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './_headerBar.scss';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -17,14 +18,15 @@ const HeaderBar: React.FC = () => {
     <header className="header-bar">
       <div className="container">
         <div className="logo">
-          <span>Ezio</span>Projects
+          <Link to="/" onClick={fecharMenu}>
+            <span>Ezio</span>Projects
+          </Link>
         </div>
 
         <nav className={`nav-links ${menuAberto ? 'ativo' : ''}`}>
-          <a href="#inicio" onClick={fecharMenu}>Início</a>
-          <a href="#servicos" onClick={fecharMenu}>Serviços</a>
-          <a href="#projetos" onClick={fecharMenu}>Projetos</a>
-          <a href="#contato" onClick={fecharMenu}>Contato</a>
+          <Link to="/" onClick={fecharMenu}>Início</Link>
+          <Link to="/servicos" onClick={fecharMenu}>Serviços</Link>
+          <Link to="/projetos" onClick={fecharMenu}>Projetos</Link>
           <button className="btn-contato-mobile" onClick={fecharMenu}>Fale Conosco</button>
         </nav>
 
