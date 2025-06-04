@@ -66,13 +66,10 @@ const Servicos: React.FC = () => {
         >
           <h2>Seja um parceiro <FaHandshake /></h2>
           <p>
-            Trabalha como desenvolvedor ou possui uma agência? Junte-se à Ezio Projects e participe de projetos incríveis!
+            É um desenvolvedor freelancer ou tem uma agência e quer expandir seus negócios? Junte-se à Ezio Projects!
           </p>
           <p>
-            <FaEnvelope /> E-mail: <strong>parcerias@ezioprojects.com</strong>
-          </p>
-          <p>
-            <FaPhone /> Telefone: <strong>(11) 99999-9999</strong>
+            A Ezio Projects está sempre em busca de parcerias com profissionais e agências que compartilhem nossa paixão por tecnologia e inovação.
           </p>
           <a 
             href="mailto:parcerias@ezioprojects.com" 
@@ -81,7 +78,7 @@ const Servicos: React.FC = () => {
             Entrar em contato
           </a>
           <p>
-            Estamos sempre em busca de talentos e parceiros estratégicos. Chame a gente!
+            Não deixe seu projeto de lado. Chame a gente!
           </p>
         </motion.div>
       </div>
