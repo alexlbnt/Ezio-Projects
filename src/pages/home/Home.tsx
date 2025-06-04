@@ -7,7 +7,6 @@ const Home: React.FC = () => {
   return (
     <div className="home">
 
-      {/* Seção Hero */}
       <motion.section 
         className="hero"
         initial={{ opacity: 0, y: 20 }}
@@ -58,7 +57,6 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Seção de Serviços */}
       <motion.section 
         className="services"
         initial={{ opacity: 0 }}
@@ -110,7 +108,7 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Seção Fases de Construção (Atualizada) */}
+
       <motion.section 
         className="fases"
         initial={{ opacity: 0 }}
@@ -153,7 +151,6 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Seção de Projetos */}
       <motion.section 
         className="projects"
         initial={{ opacity: 0 }}
@@ -184,7 +181,7 @@ const Home: React.FC = () => {
             {[1, 2, 3].map((proj, index) => (
               <motion.img
                 key={index}
-                src={`/assets/project1.jpg`}
+                src={`/assets/project${proj}.jpg`}
                 alt={`Projeto ${proj}`}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
