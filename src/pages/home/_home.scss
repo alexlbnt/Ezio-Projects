@@ -97,6 +97,7 @@
     h2 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
+      color: #ffffff;
     }
 
     p {
@@ -142,12 +143,83 @@
     }
   }
 
+  .fases {
+    background: #0f0f1a;
+    padding: 4rem 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+
+    .etapas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+
+      .etapa-card {
+        background: #1c1c2b;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .etapa-numero {
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: #ffffff;
+          background: #7f5af0;
+          width: 50px;
+          height: 50px;
+          margin: 0 auto 1rem;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        h3 {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #ffffff;
+          margin-bottom: 0.5rem;
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #7f5af0;
+            margin: 0.5rem auto 0;
+          }
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: #c0c0d0;
+          line-height: 1.5;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
   .projects {
     text-align: center;
 
     h2 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
+      color: #ffffff;
     }
 
     p {

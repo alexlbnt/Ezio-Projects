@@ -18,6 +18,13 @@
     margin-bottom: 1rem;
   }
 
+  .subtitulo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #7f5af0;
+  margin-bottom: 0.5rem;
+  }
+
   .descricao {
     font-size: 1.1rem;
     color: #dcdcdc;
@@ -40,6 +47,8 @@
       text-align: center;
       transition: transform 0.3s;
 
+
+      
       .icone {
         font-size: 2.5rem;
         color: #7f5af0;
@@ -56,6 +65,30 @@
         font-size: 1rem;
         color: #c0c0c0;
       }
+      
+        .seta-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.8rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #7f5af0;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+
+    svg {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      background-color: #6842d5;
+    }
+  }
+      
+
     }
   }
 
@@ -124,4 +157,29 @@
       align-items: center;
     }
   }
+
+  .parceria {
+  .btn-contato {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: #7f5af0;
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #6842d5;
+    }
+  }
+
+  svg {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+}
+
+
 }

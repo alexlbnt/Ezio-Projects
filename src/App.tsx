@@ -5,6 +5,7 @@ import HeaderBar from './components/headerbar/HeaderBar';
 import Home from './pages/home/Home';
 import Servicos from './pages/servicos/Servicos';
 import Projetos from './pages/projetos/Projetos';
+import FaleConosco from './pages/faleconosco/FaleConosco';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/servicos" element={<Servicos />} />
         <Route path="/projetos" element={<Projetos />} />
+        <Route path="/faleconosco" element={<FaleConosco />} />
       </Routes>
     </Router>
   );

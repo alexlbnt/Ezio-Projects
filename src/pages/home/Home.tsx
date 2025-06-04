@@ -110,6 +110,49 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
+      {/* Seção Fases de Construção (Atualizada) */}
+      <motion.section 
+        className="fases"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="container">
+          <h2>Fases de construção</h2>
+          <div className="etapas-grid">
+            {[
+              {
+                numero: '1',
+                titulo: 'Análise / Discovery',
+                texto: 'Mapeamento de todas as funcionalidades que serão implementadas criando o escopo detalhado.'
+              },
+              {
+                numero: '2',
+                titulo: 'Design e Prototipação',
+                texto: 'Você poderá ver exatamente como será cada uma das telas do seu projeto antes de iniciarmos o desenvolvimento.'
+              },
+              {
+                numero: '3',
+                titulo: 'Desenvolvimento',
+                texto: 'Aqui é onde a mágica acontece, tudo que foi mapeado anteriormente ganha vida, e você acompanha tudo via entregas incrementais.'
+              },
+              {
+                numero: '4',
+                titulo: 'Testes e homologação',
+                texto: 'Antes do lançamento, tudo passa pelo controle de qualidade para que você também, possa avaliar e liberar ao público.'
+              }
+            ].map((fase, index) => (
+              <div className="etapa-card" key={index}>
+                <div className="etapa-numero">{fase.numero}</div>
+                <h3>{fase.titulo}</h3>
+                <p>{fase.texto}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
       {/* Seção de Projetos */}
       <motion.section 
         className="projects"

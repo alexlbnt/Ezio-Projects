@@ -36,19 +36,22 @@ const HeaderBar: React.FC = () => {
               <Link to="/" onClick={fecharMenu}>Início</Link>
               <Link to="/servicos" onClick={fecharMenu}>Serviços</Link>
               <Link to="/projetos" onClick={fecharMenu}>Projetos</Link>
-              <button className="btn-contato-mobile" onClick={fecharMenu}>Fale Conosco</button>
+              <Link to="/faleconosco" className="btn-contato-mobile" onClick={fecharMenu}>
+                Fale Conosco
+              </Link>
             </motion.nav>
           )}
         </AnimatePresence>
 
-        {/* Para desktop */}
         <nav className="nav-links desktop-only">
           <Link to="/">Início</Link>
           <Link to="/servicos">Serviços</Link>
           <Link to="/projetos">Projetos</Link>
         </nav>
 
-        <button className="btn-contato desktop-only">Fale Conosco</button>
+        <Link to="/faleconosco" className="btn-contato desktop-only" onClick={fecharMenu}>
+          Fale Conosco
+        </Link>
 
         <div className="menu-toggle" onClick={alternarMenu}>
           {menuAberto ? <FaTimes /> : <FaBars />}
