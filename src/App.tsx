@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 import Servicos from './pages/servicos/Servicos';
 import Projetos from './pages/projetos/Projetos';
 import FaleConosco from './pages/faleconosco/FaleConosco';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/projetos" element={<Projetos />} />
         <Route path="/faleconosco" element={<FaleConosco />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
