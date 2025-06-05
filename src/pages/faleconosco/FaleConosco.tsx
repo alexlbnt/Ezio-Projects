@@ -1,4 +1,3 @@
-import React from 'react';
 import './_faleConosco.scss';
 
 const FaleConosco = () => {

@@ -7,8 +7,7 @@ import {
   FaMobileAlt, 
   FaCloud, 
   FaHandshake, 
-  FaEnvelope, 
-  FaPhone, 
+  
   FaArrowRight 
 } from 'react-icons/fa';
 
