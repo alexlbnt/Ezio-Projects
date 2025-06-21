@@ -11,7 +11,7 @@ const projetos = [
     tecnologias: ["React", "TypeScript", "SQL"],
     imagem: "/assets/project1.jpg", 
     github: "https://github.com/alexlbnt/Controle-de-Estoque",
-    demo: "https://estoque.ezioprojects.com",
+
   },
   {
     titulo: "Site empresa Vidal Pinheiro vistorias técnicas de imóveis",
@@ -20,7 +20,7 @@ const projetos = [
     tecnologias: ["WordPress"],
     imagem: "/assets/project2.jpg", 
     github: "https://github.com/ezio-projects/tarefas", 
-    demo: "https://tarefas.ezioprojects.com", 
+
   },
   {
     titulo: "Aplicativo OsRPjas - Fichas de RPG para jogos online",
@@ -29,7 +29,7 @@ const projetos = [
     tecnologias: ["Flutter", "Firebase", "Dart"],
     imagem: "/assets/project3.jpg", 
     github: "https://github.com/jonathastfm/ezio_projects", 
-    demo: "https://studiofitness.vercel.app", 
+
   },
 ];
 
@@ -60,9 +60,6 @@ const Projetos: React.FC = () => {
                 ))}
               </ul>
               <div className="links">
-                <a href={projeto.demo} target="_blank" rel="noreferrer">
-                  <FaExternalLinkAlt /> Ver Projeto
-                </a>
                 <a href={projeto.github} target="_blank" rel="noreferrer">
                   <FaGithub /> GitHub
                 </a>
