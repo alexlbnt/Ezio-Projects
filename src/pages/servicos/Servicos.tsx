@@ -71,7 +71,7 @@ const Servicos: React.FC = () => {
             A Ezio Projects está sempre em busca de parcerias com profissionais e agências que compartilhem nossa paixão por tecnologia e inovação.
           </p>
           <a 
-            href="mailto:parcerias@ezioprojects.com" 
+            href="mailto:eziocorporation@gmail.com" 
             className="btn-contato"
           >
             Entrar em contato

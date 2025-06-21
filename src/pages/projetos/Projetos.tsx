@@ -9,8 +9,8 @@ const projetos = [
     descricao:
       "Aplicação web full stack desenvolvida para pequenas empresas gerenciarem produtos, entradas e saídas com autenticação e painéis interativos.",
     tecnologias: ["React", "TypeScript", "SQL"],
-    imagem: "/assets/project1.jpg", // Caminho atualizado
-    github: "https://github.com/ezio-projects/estoque",
+    imagem: "/assets/project1.jpg", 
+    github: "https://github.com/alexlbnt/Controle-de-Estoque",
     demo: "https://estoque.ezioprojects.com",
   },
   {
@@ -18,18 +18,18 @@ const projetos = [
     descricao:
       "Site responsivo focado em visorias para clientes e parceria com outras empresas.",
     tecnologias: ["WordPress"],
-    imagem: "/assets/project2.jpg", // Caminho atualizado
-    github: "https://github.com/ezio-projects/tarefas", // Considere atualizar este link se for um projeto diferente
-    demo: "https://tarefas.ezioprojects.com", // Considere atualizar este link se for um projeto diferente
+    imagem: "/assets/project2.jpg", 
+    github: "https://github.com/ezio-projects/tarefas", 
+    demo: "https://tarefas.ezioprojects.com", 
   },
   {
     titulo: "Aplicativo OsRPjas - Fichas de RPG para jogos online",
     descricao:
       "Aplicativo focado em portatilidade, acessibilidade e praticidade.",
     tecnologias: ["Flutter", "Firebase", "Dart"],
-    imagem: "/assets/project3.jpg", // Caminho atualizado
-    github: "https://github.com/ezio-projects/studiofitness", // Considere atualizar este link se for um projeto diferente
-    demo: "https://studiofitness.vercel.app", // Considere atualizar este link se for um projeto diferente
+    imagem: "/assets/project3.jpg", 
+    github: "https://github.com/jonathastfm/ezio_projects", 
+    demo: "https://studiofitness.vercel.app", 
   },
 ];
 
