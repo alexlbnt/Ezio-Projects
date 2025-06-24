@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./_projetos.scss";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const projetos = [
   {
