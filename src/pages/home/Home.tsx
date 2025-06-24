@@ -14,14 +14,11 @@ import {
   FaCss3Alt
 } from 'react-icons/fa';
 import {
-  IoLogoJavascript,
-  IoLogoIonic
-} from 'react-icons/io5';
-import {
   SiFlutter,
   SiDart,
   SiCplusplus,
-  SiMongodb
+  SiTypescript,
+  SiFigma,
 } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
@@ -47,15 +44,14 @@ const Home: React.FC = () => {
 
   const technologies = [
     { Icon: FaReact, name: 'React' },
-    { Icon: IoLogoJavascript, name: 'JavaScript' },
+    { Icon: SiTypescript, name: 'TypeScript' },
     { Icon: SiFlutter, name: 'Flutter' },
     { Icon: SiDart, name: 'Dart' },
     { Icon: SiCplusplus, name: 'C++' },
     { Icon: FaPython, name: 'Python' },
-    { Icon: SiMongodb, name: 'MongoDB' },
     { Icon: FaHtml5, name: 'HTML5' },
     { Icon: FaCss3Alt, name: 'CSS3' },
-    { Icon: IoLogoIonic, name: 'Ionic' },
+    { Icon: SiFigma, name: 'Figma' }    
   ];
 
   const techIconsContainerVariants = {
