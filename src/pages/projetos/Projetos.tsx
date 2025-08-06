@@ -14,12 +14,12 @@ const projetos = [
 
   },
   {
-    titulo: "Site empresa Vidal Pinheiro vistorias técnicas de imóveis",
+    titulo: "Site empresa Master Assessoria Contábil",
     descricao:
-      "Site responsivo focado em visorias para clientes e parceria com outras empresas.",
-    tecnologias: ["WordPress"],
+      "Site portfolio focado em mostra de resultados para clientes.",
+    tecnologias: ["WReact", "TypeScript", "SCSS"],
     imagem: "/assets/project2.jpg", 
-    github: "https://github.com/ezio-projects/tarefas", 
+    github: "https://github.com/alexlbnt/Master-AC", 
 
   },
   {
