@@ -188,8 +188,7 @@ const Home: React.FC = () => {
               { icon: <FaMobileAlt />, title: 'Apps Mobile', text: 'Aplicativos nativos e híbridos para Android e iOS com alta performance.' },
               { icon: <FaPaintBrush />, title: 'Design UI/UX', text: 'Interfaces intuitivas e experiências que encantam usuários.' },
               { icon: <FaLightbulb />, title: 'Consultoria Técnica', text: 'Acompanhamento estratégico para transformar sua ideia em realidade.' },
-              { icon: <FaCloud />, title: 'Soluções em Nuvem', text: 'Infraestrutura confiável e escalável para seu sistema.' },
-              { icon: <FaTools />, title: 'Manutenção e Suporte', text: 'Atualizações, monitoramento e segurança contínuos.' },
+              { icon: <FaTools />, title: 'Equipe de Desenvolvedores', text: 'Fornecemos a equipe necessaria para desenvolver os seus projetos.' },
             ].map((service, index) => (
               <motion.div
                 className="card"
