@@ -12,9 +12,6 @@ const Footer = () => {
             <a href="https://www.instagram.com/ezioprojects" target="_blank" rel="noopener noreferrer">
               <Instagram />
             </a>
-            <a href="https://www.facebook.com/seuperfil" target="_blank" rel="noopener noreferrer">
-              <Facebook />
-            </a>
             <a href="https://www.linkedin.com/company/seuperfil" target="_blank" rel="noopener noreferrer">
               <Linkedin />
             </a>
