@@ -1,5 +1,3 @@
-
-
 .servicos {
   padding: 4rem 2rem;
   background-color: #0f0f1a;
@@ -14,15 +12,14 @@
   .titulo {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ffffff;
     margin-bottom: 1rem;
   }
 
   .subtitulo {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #7f5af0;
-  margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #7f5af0;
+    margin-bottom: 0.5rem;
   }
 
   .descricao {
@@ -32,6 +29,7 @@
     margin: 0 auto 3rem;
   }
 
+  /* CARDS DE SERVIÇOS */
   .cards-servicos {
     display: flex;
     flex-wrap: wrap;
@@ -39,16 +37,19 @@
     gap: 2rem;
 
     .card {
-      background: #1b1d29;
+      background: #1c1c2bc2;
       border-radius: 12px;
       padding: 2rem;
       max-width: 300px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
+      border: 1px solid #2a2a3f; 
 
+      &:hover {
+        transform: translateY(-5px);
+      }
 
-      
       .icone {
         font-size: 2.5rem;
         color: #7f5af0;
@@ -58,46 +59,46 @@
       h3 {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
-        color: #ffffff;
       }
 
       p {
         font-size: 1rem;
         color: #c0c0c0;
       }
-      
-        .seta-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.8rem;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #7f5af0;
-    color: white;
-    text-decoration: none;
-    transition: background 0.3s;
 
-    svg {
-      font-size: 1rem;
-    }
+      .seta-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.8rem;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #7f5af0;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s ease;
 
-    &:hover {
-      background-color: #6842d5;
-    }
-  }
-      
+        svg {
+          font-size: 1rem;
+        }
 
+        &:hover {
+          background-color: #6842d5;
+        }
+      }
     }
   }
 
+  /* SEÇÃO PARCERIA */
   .parceria {
     margin-top: 4rem;
     padding: 3rem 2rem;
-    background-color: #1b1d29;
-    color: #ffffff;
+    background-color: #1c1c2bc2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 12px;
+    text-align: center;
+    border: 1px solid #2a2a3f; 
 
     h2 {
       font-size: 2rem;
@@ -142,44 +143,43 @@
         font-weight: bold;
         border: none;
         cursor: pointer;
-        transition: background 0.3s;
+        transition: background 0.3s ease;
 
         &:hover {
           background-color: #6842d5;
         }
       }
     }
+
+    .btn-contato {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.5rem;
+      background-color: #7f5af0;
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+
+      svg {
+        margin-right: 0.5rem;
+        vertical-align: middle;
+      }
+
+      &:hover {
+        background-color: #6842d5;
+      }
+    }
   }
 
+  /* RESPONSIVIDADE */
   @media (max-width: 768px) {
     .cards-servicos {
       flex-direction: column;
       align-items: center;
     }
   }
-
-  .parceria {
-  .btn-contato {
-    display: inline-block;
-    margin-top: 1.5rem;
-    background-color: #7f5af0;
-    color: white;
-    padding: 0.8rem 1.6rem;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s;
-
-    &:hover {
-      background-color: #6842d5;
-    }
-  }
-
-  svg {
-    margin-right: 0.5rem;
-    vertical-align: middle;
-  }
-}
-
-
 }

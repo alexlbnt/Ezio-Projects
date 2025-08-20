@@ -31,7 +31,7 @@
   }
 
   .card-projeto {
-    background-color: #1b1d29;
+    background-color: #1c1c2bc2;
     border-radius: 12px;
     padding: 2rem;
     width: 80%;
@@ -39,6 +39,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
     text-align: left;
+    border: 1px solid #2a2a3f; 
 
     img {
       width: 100%;

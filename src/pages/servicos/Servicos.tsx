@@ -77,7 +77,8 @@ const Servicos: React.FC = () => {
             Entrar em contato
           </a>
           <p>
-            Não deixe seu projeto de lado. Chame a gente!
+            <br />
+            Seu projeto merece sair do papel. Conte com a gente!
           </p>
         </motion.div>
       </div>
