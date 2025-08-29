@@ -17,7 +17,7 @@ const projetos = [
     titulo: "Site empresa Master Assessoria Contábil",
     descricao:
       "Site portfolio focado em mostra de resultados para clientes.",
-    tecnologias: ["WReact", "TypeScript", "SCSS"],
+    tecnologias: ["React", "TypeScript", "SCSS"],
     imagem: "/assets/project2.jpg", 
     github: "https://github.com/alexlbnt/Master-AC", 
 
