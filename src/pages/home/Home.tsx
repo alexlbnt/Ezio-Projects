@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import {
   FaCode,
   FaMobileAlt,
-  FaPaintBrush,
   FaTools,
   FaLightbulb,
   FaReact,
@@ -187,7 +186,6 @@ const Home: React.FC = () => {
               {[
                 { icon: <FaCode />, title: 'Desenvolvimento Web', text: 'Soluções sob medida com tecnologias modernas e escaláveis.' },
                 { icon: <FaMobileAlt />, title: 'Apps Mobile', text: 'Aplicativos nativos e híbridos para Android e iOS com alta performance.' },
-                { icon: <FaPaintBrush />, title: 'Design UI/UX', text: 'Interfaces intuitivas e experiências que encantam usuários.' },
                 { icon: <FaLightbulb />, title: 'Consultoria Técnica', text: 'Transforme sua ideia em realidade com orientação estratégica.' },
                 { icon: <FaTools />, title: 'Equipe de Devs', text: 'Fornecemos a equipe necessária para desenvolver seus projetos.' },
               ].map((s, i) => (
@@ -221,10 +219,10 @@ const Home: React.FC = () => {
             <h2>Fases de construção</h2>
             <div className="etapas-grid">
               {[
-                { numero: '1', titulo: 'Análise', texto: 'Mapeamento de todas as funcionalidades e escopo detalhado.' },
-                { numero: '2', titulo: 'Design e Prototipação', texto: 'Visualize as telas antes do desenvolvimento.' },
-                { numero: '3', titulo: 'Desenvolvimento', texto: 'Implementação com entregas incrementais.' },
-                { numero: '4', titulo: 'Testes e Homologação', texto: 'Controle de qualidade antes do lançamento.' }
+                { numero: '1', titulo: 'Análise', texto: 'Mapeamento de todas as funcionalidades que serão implementadas criando o escopo detalhado.' },
+                { numero: '2', titulo: 'Design e Prototipação', texto: 'Você poderá ver exatamente como será cada uma das telas do seu projeto antes de iniciarmos o desenvolvimento.' },
+                { numero: '3', titulo: 'Desenvolvimento', texto: 'Aqui é onde a mágica acontece, tudo que foi mapeado anteriormente ganha vida, e você acompanha tudo via entregas incrementais.' },
+                { numero: '4', titulo: 'Testes e Homologação', texto: 'Antes do lançamento, tudo passa pelo controle de qualidade para que você também, possa avaliar e liberar ao público.' }
               ].map((f, i) => (
                 <motion.div
                   key={i}

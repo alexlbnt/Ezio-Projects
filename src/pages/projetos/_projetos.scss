@@ -1,149 +1,185 @@
 .projetos {
-  background-color: #0f0f1a;
+  background: linear-gradient(180deg, #0f0f1a 0%, #151529d5 100%);
   color: #ffffff;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+  overflow: hidden;
 
   .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     text-align: center;
   }
 
   .titulo {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #ffffff;
+    background: linear-gradient(90deg, #7f5af0, #7f5af0, #7f5af0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #7f5af0, 0 0 20px #2cb67d23;
+    }
+    to {
+      text-shadow: 0 0 25px #00c8ff00, 0 0 40px #7f5af0;
+    }
   }
 
   .descricao {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #dcdcdc;
-    max-width: 800px;
-    margin: 0 auto 3rem;
+    max-width: 850px;
+    margin: 0 auto 4rem;
+
+    span {
+      color: #7f5af0;
+      font-weight: bold;
+    }
   }
 
   .lista-projetos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 3rem;
   }
 
   .card-projeto {
-    background-color: #1c1c2bc2;
-    border-radius: 12px;
-    padding: 2rem;
-    width: 80%;
-    max-width: 350px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    text-align: left;
-    border: 1px solid #2a2a3f; 
+    position: relative;
+    height: 480px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+    will-change: transform;
 
-    img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-size: 1.4rem;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      color: #c0c0c0;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1rem;
-
-      li {
-        display: inline-block;
-        background: #2a2d40;
-        padding: 0.4rem 0.8rem;
-        border-radius: 6px;
-        font-size: 0.85rem;
-        color: #ffffff;
-        margin: 0.2rem;
+    &:hover {
+      .overlay {
+        background: linear-gradient(
+          to top,
+          rgba(15, 15, 26, 0.95) 30%,
+          rgba(15, 15, 26, 0.6) 80%,
+          rgba(15, 15, 26, 0.1) 100%
+        );
       }
     }
 
-    .links {
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(15, 15, 26, 0.9) 40%,
+        rgba(15, 15, 26, 0.5) 80%,
+        rgba(15, 15, 26, 0.1) 100%
+      );
+      padding: 2rem;
       display: flex;
-      gap: 0.75rem; // Ajuste fino
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: left;
+      backdrop-filter: blur(4px);
+      transition: background 0.4s ease;
 
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.4rem;
-        background-color: #7f5af0;
-        color: white;
-        padding: 0.6rem 1rem;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        text-decoration: none;
-        transition: background 0.3s;
+      h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+        color: #fff;
+
+        transition: transform 0.3s ease;
 
         &:hover {
-          background-color: #6842d5;
+          transform: scale(1.05);
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: #dcdcdc;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+
+        li {
+          background: rgba(127, 90, 240, 0.2);
+          border: 1px solid #7f5af0;
+          padding: 0.4rem 1rem;
+          border-radius: 8px;
+          font-size: 0.9rem;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #7f5af0;
+            color: #fff;
+            box-shadow: 0 0 12px #7f5af0;
+          }
+        }
+      }
+
+      .links {
+        display: flex;
+        gap: 1rem;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          background: linear-gradient(90deg, #7f5af0, #2c9ab6);
+          color: #fff;
+          padding: 0.8rem 1.3rem;
+          border-radius: 10px;
+          font-size: 0.95rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: skewX(-20deg);
+            transition: left 0.5s;
+          }
+
+          &:hover::before {
+            left: 100%;
+          }
+
+          &:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 18px #7f5af0;
+          }
         }
       }
     }
   }
 
   @media (max-width: 768px) {
-    .lista-projetos {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: 2rem 1rem;
-
     .titulo {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
     }
-
     .descricao {
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
-
     .card-projeto {
-      padding: 1.5rem;
-
-      h3 {
-        font-size: 1.2rem;
-      }
-
-      p {
-        font-size: 0.9rem;
-      }
-
-      ul li {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.6rem;
-      }
-
-      .links {
-        flex-direction: column;
-        gap: 0.5rem;
-
-        a {
-          width: 100%;
-          font-size: 0.85rem;
-          padding: 0.5rem 0.8rem;
-        }
-      }
+      height: 380px;
     }
   }
 }

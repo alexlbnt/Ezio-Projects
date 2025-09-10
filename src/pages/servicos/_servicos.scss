@@ -1,6 +1,6 @@
 .servicos {
-  padding: 4rem 2rem;
-  background-color: #0f0f1a;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #0f0f1a 0%, #151529d5 100%);
   color: #ffffff;
 
   .container {
@@ -10,23 +10,19 @@
   }
 
   .titulo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
-
-  .subtitulo {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #7f5af0;
-    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #7f5af0, #7f5af0, #7f5af0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .descricao {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #dcdcdc;
-    max-width: 700px;
-    margin: 0 auto 3rem;
+    max-width: 750px;
+    margin: 0 auto 3.5rem;
   }
 
   /* CARDS DE SERVIÇOS */
@@ -34,57 +30,70 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.5rem;
 
     .card {
-      background: #1c1c2bc2;
-      border-radius: 12px;
-      padding: 2rem;
+      background: rgba(28, 28, 43, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 2.5rem 2rem;
       max-width: 300px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
-      transition: all 0.3s ease;
-      border: 1px solid #2a2a3f; 
+      border: 1px solid rgba(127, 90, 240, 0.2);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
 
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        border: 1px solid transparent;
+        background: linear-gradient(#1c1c2b, #1c1c2b) padding-box,
+                    linear-gradient(90deg, #7f5af0, #2ec4b6) border-box;
+        box-shadow: 0 0 30px rgba(127, 90, 240, 0.6);
       }
 
       .icone {
-        font-size: 2.5rem;
+        font-size: 3.2rem;
         color: #7f5af0;
         margin-bottom: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #2ec4b6;
+          text-shadow: 0 0 15px #2ec4b6;
+        }
       }
 
       h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
       }
 
       p {
         font-size: 1rem;
         color: #c0c0c0;
+        line-height: 1.5rem;
       }
 
       .seta-link {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin-top: 0.8rem;
-        width: 30px;
-        height: 30px;
+        margin-top: 1.5rem;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        background-color: #7f5af0;
+        background: linear-gradient(90deg, #7f5af0, #2ec4b6);
         color: white;
         text-decoration: none;
-        transition: background 0.3s ease;
+        transition: transform 0.3s ease;
 
         svg {
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
 
         &:hover {
-          background-color: #6842d5;
+          transform: rotate(90deg) scale(1.15);
         }
       }
     }
@@ -92,86 +101,49 @@
 
   /* SEÇÃO PARCERIA */
   .parceria {
-    margin-top: 4rem;
-    padding: 3rem 2rem;
-    background-color: #1c1c2bc2;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px;
+    margin-top: 6rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1c1c2b, #242438, #1c1c2b);
+    border-radius: 18px;
+    border: 1px solid #2a2a3f;
     text-align: center;
-    border: 1px solid #2a2a3f; 
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      color: #7f5af0;
     }
 
     p {
       font-size: 1.1rem;
-      color: #cfcfcf;
-      margin-bottom: 2rem;
-    }
-
-    .form-parceiro {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-
-      input,
-      textarea {
-        width: 100%;
-        max-width: 500px;
-        padding: 0.8rem 1rem;
-        border-radius: 8px;
-        border: none;
-        font-size: 1rem;
-        background-color: #0f0f1a;
-        color: white;
-      }
-
-      textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
-
-      button {
-        background-color: #7f5af0;
-        color: white;
-        padding: 0.8rem 1.6rem;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease;
-
-        &:hover {
-          background-color: #6842d5;
-        }
-      }
+      color: #d0d0d0;
+      margin-bottom: 1.5rem;
     }
 
     .btn-contato {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin-top: 1.5rem;
-      background-color: #7f5af0;
+      background: linear-gradient(90deg, #7f5af0, #2ec4b6);
       color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 8px;
+      padding: 1rem 2.2rem;
+      border-radius: 12px;
       font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s ease;
-
-      svg {
-        margin-right: 0.5rem;
-        vertical-align: middle;
-      }
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
 
       &:hover {
-        background-color: #6842d5;
+        box-shadow: 0 0 20px rgba(127, 90, 240, 0.9);
+        transform: scale(1.08);
       }
+    }
+
+    .frase-final {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #9f9f9f;
     }
   }
 
@@ -180,6 +152,14 @@
     .cards-servicos {
       flex-direction: column;
       align-items: center;
+    }
+
+    .titulo {
+      font-size: 2.2rem;
+    }
+
+    .parceria h2 {
+      font-size: 1.9rem;
     }
   }
 }

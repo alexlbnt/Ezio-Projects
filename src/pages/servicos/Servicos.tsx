@@ -6,46 +6,74 @@ import {
   FaLaptopCode, 
   FaMobileAlt, 
   FaCloud, 
+  FaPaintBrush,
+  FaLightbulb,
   FaHandshake, 
-  
   FaArrowRight 
 } from 'react-icons/fa';
 
 const Servicos: React.FC = () => {
+  const servicos = [
+    {
+      icon: <FaLaptopCode />,
+      title: 'Desenvolvimento Web',
+      desc: 'Sites e sistemas personalizados com foco em desempenho, segurança e escalabilidade.'
+    },
+    {
+      icon: <FaMobileAlt />,
+      title: 'Apps Mobile',
+      desc: 'Aplicativos nativos e híbridos para Android e iOS, com experiência de usuário moderna.'
+    },
+    {
+      icon: <FaCloud />,
+      title: 'Sistemas',
+      desc: 'Infraestrutura completa, integração com bancos de dados e manutenção contínua.'
+    },
+  ];
+
   return (
     <section className="servicos" id="servicos">
       <div className="container">
-        <h2 className="titulo">Nossos Serviços</h2>
-        <p className="descricao">
+        <motion.h2 
+          className="titulo"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Nossos Serviços
+        </motion.h2>
+        <motion.p 
+          className="descricao"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
           A Ezio Projects oferece soluções sob medida para transformar ideias em produtos digitais de alta performance.
-        </p>
+        </motion.p>
 
-        <div className="cards-servicos">
-          {[
-            {
-              icon: <FaLaptopCode />,
-              title: 'Desenvolvimento Web',
-              desc: 'Sites e sistemas personalizados com foco em desempenho, segurança e escalabilidade.'
-            },
-            {
-              icon: <FaMobileAlt />,
-              title: 'Apps Mobile',
-              desc: 'Aplicativos nativos e híbridos para Android e iOS, com experiência de usuário moderna.'
-            },
-            {
-              icon: <FaCloud />,
-              title: 'Sistemas',
-              desc: 'Sistemas com infraestrutura completa, manutenibilidade e integração com Banco de Dados.'
+        <motion.div 
+          className="cards-servicos"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            show: { 
+              opacity: 1,
+              transition: { staggerChildren: 0.2 }
             }
-          ].map((item, i) => (
+          }}
+        >
+          {servicos.map((item, i) => (
             <motion.div
               key={i}
               className="card"
-              whileHover={{ scale: 1.05 }}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                show: { opacity: 1, y: 0 }
+              }}
+              whileHover={{ scale: 1.07 }}
               whileTap={{ scale: 0.97 }}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.2 }}
             >
               <div className="icone">{item.icon}</div>
               <h3>{item.title}</h3>
@@ -55,30 +83,30 @@ const Servicos: React.FC = () => {
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           className="parceria"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           <h2>Seja um parceiro <FaHandshake /></h2>
           <p>
             É um desenvolvedor freelancer ou tem uma agência e quer expandir seus negócios? Junte-se à Ezio Projects!
           </p>
           <p>
-            A Ezio Projects está sempre em busca de parcerias com profissionais e agências que compartilhem nossa paixão por tecnologia e inovação.
+            Buscamos parceiros que compartilhem nossa paixão por tecnologia e inovação.
           </p>
-          <a 
-            href="mailto:eziocorporation@gmail.com" 
+          <Link
+            to="/faleconosco"
             className="btn-contato"
+            aria-label="Entrar em contato com a Ezio Projects"
           >
             Entrar em contato
-          </a>
-          <p>
-            <br />
-            Seu projeto merece sair do papel. Conte com a gente!
+          </Link>
+          <p className="frase-final">
+            Seu projeto merece sair do papel. Conte com a nossa equipe!
           </p>
         </motion.div>
       </div>
