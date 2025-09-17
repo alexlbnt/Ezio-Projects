@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import "./_projetos.scss";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const projetos = [
   {
@@ -50,11 +50,6 @@ const projetos = [
 ];
 
 const Projetos: React.FC = () => {
-
-  const resetTransform = (cardRef: React.RefObject<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    cardRef.current.style.transform = "perspective(1000px) rotateX(0) rotateY(0) scale(1)";
-  };
 
   return (
     <section className="projetos">

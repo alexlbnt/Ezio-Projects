@@ -1,5 +1,5 @@
 import './_footer.scss';
-import { Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (

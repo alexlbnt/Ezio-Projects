@@ -6,8 +6,6 @@ import {
   FaLaptopCode, 
   FaMobileAlt, 
   FaCloud, 
-  FaPaintBrush,
-  FaLightbulb,
   FaHandshake, 
   FaArrowRight 
 } from 'react-icons/fa';
